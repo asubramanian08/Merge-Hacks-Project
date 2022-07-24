@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="assets/styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link href="{{url_for('static', filename='assets/styles.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='assets/loginstyles.css')}}" rel="stylesheet" <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <!-- NAV BAR -->
+        {% if current_user.is_authenticated %}
+        <div class="topnav" id="myTopnav">
+            <div class="topnav" id="myTopnav">
+                <a href="/" class="active">Home</a>
+                <a href="/info">About Us</a>
+                <a href="/recipes">Recipes</a>
+                <a href="/login">Login</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i></a>
+                {% endif %}
+
+            </div>
+        </div>
+
+        <!--       <nav>
+        
+        <ul class="nav_links">
+          
+          <div class="topnav" id="myTopnav">
+          <a href = #home>Home</a>
+          <a href = #info>Info</a>
+          <a href = #recipes>Recipes</a>
+          <a href = #log-in>Login</a>
+                  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+        </ul>
+
+      </nav> -->
+    </header>
+
+    <section class="ftco-section" style="text-align: center;">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <!-- 				<div class="col-md-6 text-center mb-5">
+          
+					<h2 class="heading-section">Welcome</h2>
+				</div> -->
+            </div>
+            <div class="beegContainer">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="login-wrap p-0" <!-- LOGIN TEXT HERE -->
+
+                            <h3 id=loginStyle class="mb-4 text-center">Login</h3>
+                            <form method="POST" action="#" class="signin-form">
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" class="form-control"
+                                        placeholder="example@example.com" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <input id="password1" name="password1" type="password" class="form-control"
+                                        placeholder="Password" required>
+                                    <span toggle="#password-field"
+                                        class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <button type="submit" class="form-control btn btn-primary submit px-3">Sign
+                                            In</button>
+                                    </div>
+
+                                    <a class="register" href="/register">
+                                        <div class="typewriter">
+                                            <p class="registerP">Don't have an account yet? Register now!</p>
+                                        </div>
+                                    </a>
+
+                            </form>
+
+
+
+                            {% with messages = get_flashed_messages(with_categories=true) %}
+                            {% if messages %}
+                            {% for category, message in messages %}
+                            {% if category == "fail" %}
+                            <div class="alert alert-danger alter-dismissable fade show" role="alert">
+                                {{ message }}
+                                <buton type="button" class="close" data-dismiss="alert">
+                                    <span aria-hidden="true"></span>
+                                    </button>
+                            </div>
+                            {% endif %}
+                            {% if category == "success" %}
+                            <div class="alert alert-success alter-dismissable fade show" role="alert">
+                                {{ message }}
+                                <button>
+                                    <span aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+                            {% endwith %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{url_for('static',filename='login-form-20/js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='login-form-20/js/popper.js')}}"></script>
+    <script src="{{url_for('static',filename='login-form-20/js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='login-form-20/js/main.js')}}"></script>
+    <script src="{{url_for('static',filename = 'assets/script.js')}}"></script>
+
+</body>
+
+</html>

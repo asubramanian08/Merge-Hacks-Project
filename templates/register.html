@@ -1,0 +1,119 @@
+<!-- <!doctype html> -->
+<html lang="en">
+
+<head>
+    <title>Login 10</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link href="{{url_for('static', filename='assets/styles.css')}}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--     <link rel="stylesheet" href="{{url_for('static',filename='login-form-20/css/style.css')}}">
+ -->
+    <!-- CSS FOR REGISTER LINK -->
+    <link href="{{url_for('static', filename='assets/register.css')}}" rel="stylesheet">
+
+    <!--   FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+        <!--         {% if current_user.is_authenticated %} -->
+        <div class="topnav" id="myTopnav">
+            <div class="topnav" id="myTopnav">
+                <a href="/" class="active">Home</a>
+                <a href="/info">About Us</a>
+                <a href="/recipes">Recipes</a>
+                <a href="/login">Login</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i></a>
+                <!--                 {% endif %} -->
+
+            </div>
+        </div>
+    </header>
+    <section class="ftco-section">
+        <div class="beegContainer">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-5">
+                        <!-- 					<h2 class="heading-section">Welcome</h2> -->
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="login-wrap p-0">
+                            <h2 class="mb-4 text-center">Register Now!</h2>
+                            <form method="POST" action="#" class="signin-form">
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" class="form-control"
+                                        placeholder="example@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="username" name="username" class="form-control"
+                                        placeholder="Username" required>
+                                </div>
+                                <div class="form-group">
+                                    <input id="password1" name="password1" type="password" class="form-control"
+                                        placeholder="Password" required>
+                                    <span toggle="#password-field"
+                                        class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input id="password2" name="password2" type="password" class="form-control"
+                                        placeholder="Password Confirmation" required>
+                                    <span toggle="#password-field"
+                                        class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="form-control btn btn-primary submit px-3">Sign
+                                        Up</button>
+                                </div>
+                            </form>
+                            <a href="/login">
+                                <p>Already have an account? Sign-in now!</p>
+                            </a>
+
+                            {% with messages = get_flashed_messages(with_categories=true) %}
+                            {% if messages %}
+                            {% for category, message in messages %}
+                            {% if category == "fail" %}
+                            <div class="alert alert-danger alter-dismissable fade show" role="alert">
+                                {{ message }}
+                                <buton type="button" class="close" data-dismiss="alert">
+                                    <span aria-hidden="true"></span>
+                                    </button>
+                            </div>
+                            {% endif %}
+                            {% if category == "success" %}
+                            <div class="alert alert-success alter-dismissable fade show" role="alert">
+                                {{ message }}
+                                <button>
+                                    <span aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+                            {% endwith %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="{{url_for('static',filename='login-form-20/js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='login-form-20/js/popper.js')}}"></script>
+    <script src="{{url_for('static',filename='login-form-20/js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='login-form-20/js/main.js')}}"></script>
+    <script src="{{url_for('static',filename = 'assets/script.js')}}"></script>
+</body>
+
+</html>

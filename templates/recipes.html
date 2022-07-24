@@ -1,0 +1,345 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Recipes</title>
+    <link href="{{url_for('static', filename='assets/styles.css')}}" rel="stylesheet"
+        integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd">
+
+    <link href="{{url_for('static', filename='assets/recipes.css')}}" rel="stylesheet">
+
+    <!--   FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+        {% if current_user.is_authenticated %}
+        <div class="topnav" id="myTopnav">
+            <div class="topnav" id="myTopnav">
+                <a href="/" class="active">Home</a>
+                <a href="/info">About Us</a>
+                <a href="/recipes">Recipes</a>
+                <a href="/login">Login</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i></a>
+                {% endif %}
+
+            </div>
+        </div>
+    </header>
+  <div class="typewriter">
+                <h1>Recipes</h1>
+            </div>
+  
+    <section>
+
+        <div class="center">
+            
+
+
+        </div>
+        <div class=" fTitle">
+            <h2 class="centerA">Appetizers</h2>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4" data-masonry='{"percentPosition": true }'
+            style="padding-top: 24px;">
+            <div class="col">
+                <div class="card">
+                    <img src="{{url_for('static', filename='assets/img/potatobites.png')}}" class="card-img-top"
+                        alt="Logo">
+
+
+                    <div class="card-body">
+                        <div class="foodTitle">
+                            <h3 class="card-title">Potato Skin Bites</h3>
+                        </div>
+                        <p id="demo"></p>
+                        <button onclick="myFunction()">Buy</button>
+                        <script>
+                            function myFunction() {
+                                let text;
+                                let quantity = prompt("How many Potato Skin Bites do you want to buy?");
+                                if (quantity == null || quantity == "") {
+                                    text = "User cancelled the transaction.";
+                                } else {
+                                    text = "You have bought" + " " + quantity + " Potato Skin Bites.";
+                                }
+                                document.getElementById("demo").innerHTML = text;
+                            }
+                        </script>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Fried potato seasoned with olive oil, salt, cayenne, and
+                                garlic
+                                pepper. Wonderful appetizer.<br></li>
+                    </div>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{url_for('static', filename='assets/img/hampickle.png')}}" class="card-img-top">
+                    <div class="card-body">
+                        <div class="foodTitle">
+                            <h3 class="card-title">Ham and Pickle Rollups</h3>
+                        </div>
+                        <p id="demo1"> </p>
+                        <button onclick="myFunction1()">Buy</button>
+                        <script>
+                            function myFunction1() {
+                                let text;
+                                let quantity = prompt("How many Ham and Pickle Rollups do you want to buy?");
+                                if (quantity == null || quantity == "") {
+                                    text = "User cancelled the transaction.";
+                                } else {
+                                    text = "You have bought" + " " + quantity + " Ham and Pickle Rollups.";
+                                }
+                                document.getElementById("demo1").innerHTML = text;
+                            }
+                        </script>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Ham, cream cheese, and pickles rolled up into a filling
+                                delicious
+                                appetizer.<br></li>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{url_for('static', filename='assets/img/tacosalad.png')}}" class="card-img-top">
+                    <div class="card-body">
+                        <div class="foodTitle">
+                            <h3 class="card-title">Taco Cup Salad</h3>
+                        </div>
+                        <p id="demo2"> </p>
+                        <button onclick="myFunction2()">Buy</button>
+                        <script>
+
+                            function myFunction2() {
+                                let text;
+                                let quantity = prompt("How many taco cup salads do you want to buy?");
+                                if (quantity == null || quantity == "") {
+                                    text = "User cancelled the transaction.";
+                                } else {
+                                    text = "You have bought" + " " + quantity + " taco cup salads.";
+                                }
+                                document.getElementById("demo2").innerHTML = text;
+                            }
+                        </script>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Small "cups" of taco bread filled with veggies and meat to
+                                appetize
+                                your stomach!<br></li>
+                    </div>
+                </div>
+            </div>
+            <div class="fTitle">
+                <h2 class="centerA">Main Course Meals</h2>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{url_for('static', filename='assets/img/cheeseburger.png')}}" class="card-img-top">
+                    <div class="card-body">
+                        <div class="foodTitle">
+                            <h3 class="card-title">Double-Stack Mushroom & Cheeseburgers</h3>
+                        </div>
+                        <p id="demo3"></p>
+                        <button onclick="myFunction3()">Buy</button>
+                        <script>
+                            function myFunction3() {
+                                let text;
+                                let quantity = prompt("How many Double-Stack Mushroom & Cheeseburgers do you want to buy?");
+                                if (quantity == null || quantity == "") {
+                                    text = "User cancelled the transaction.";
+                                } else {
+                                    text = "You have bought" + " " + quantity + " Double-Stack Mushroom & Cheeseburgers.";
+                                }
+                                document.getElementById("demo3").innerHTML = text;
+                            }
+                        </script>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Heavy main course meal filled with pickles, cheese, meat,
+                                and tasty
+                                buns coated in salt.<br></li>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{url_for('static', filename='assets/img/risotto.png')}}" class="card-img-top">
+                    <div class="card-body">
+                        <div class="foodTitle">
+                            <h3 class="card-title">Mushroom Buck-wheat Risotto</h3>
+                        </div>
+                        <p id="demo4"> </p>
+                        <button onclick="myFunction4()">Buy</button>
+                        <script>
+                            function myFunction4() {
+                                let text;
+                                let quantity = prompt("How much mushroom Mushroom Buck-wheat Risotto do you want to buy?");
+                                if (quantity == null || quantity == "") {
+                                    text = "User cancelled the transaction.";
+                                } else {
+                                    text = "You have bought" + " " + quantity + " Mushroom Buck-wheat risotto.";
+                                }
+                                document.getElementById("demo4").innerHTML = text;
+                            }
+                        </script>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">A filling veggie risotto using buckwheat and porcini
+                                mushrooms for a
+                                rich, earthy flavour<br></li>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{url_for('static', filename='assets/img/salmon.png')}}" class="card-img-top">
+                    <div class="card-body">
+                        <div class="foodTitle">
+                            <h3 class="card-title">Cedar-plank Salmon</h3>
+                        </div>
+                        <p id="demo5"></p>
+                        <button onclick="myFunction5()">Buy</button>
+                        <script>
+                            function myFunction5() {
+                                let text;
+                                let quantity = prompt("How much Cedar Plank Salmon do you want to buy?");
+                                if (quantity == null || quantity == "") {
+                                    text = "User cancelled the transaction.";
+                                } else {
+                                    text = "You have bought" + " " + quantity + " Cedar Plank Salmon.";
+                                }
+                                document.getElementById("demo5").innerHTML = text;
+                            }
+                        </script>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Spicy, flavorful fillet that serves as an excellent main
+                                course
+                                meal.<br></li>
+                    </div>
+                </div>
+            </div>
+            <div class="fTitle">
+                <h2 class="centerA">Desserts</h2>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{url_for('static', filename='assets/img/Brulee.png')}}" class="card-img-top">
+                    <div class="card-body">
+                        <div class="foodTitle">
+                            <h3 class="card-title">Creme Brulee</h3>
+                        </div>
+                        <p id="demo6"></p>
+                        <button onclick="myFunction6()">Buy</button>
+                        <script>
+                            function myFunction6() {
+                                let text;
+                                let quantity = prompt("How much Creme Brulee do you want to buy?");
+                                if (quantity == null || quantity == "") {
+                                    text = "User cancelled the transaction.";
+                                } else {
+                                    text = "You have bought" + " " + quantity + " Creme Brulee.";
+                                }
+                                document.getElementById("demo6").innerHTML = text;
+                            }
+                        </script>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Sweet dessert composed of cream and caramelized
+                                layer.<br></li>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{url_for('static', filename='assets/img/tiramisu.png')}}" class="card-img-top">
+                    <div class="card-body">
+                        <div class="foodTitle">
+                            <h3 class="card-title">Tiramisu</h3>
+                        </div>
+                        <p id="demo7"> </p>
+                        <button onclick="myFunction7()">Buy</button>
+                        <script>
+                            function myFunction7() {
+                                let text;
+                                let quantity = prompt("How much Tiramisu do you want to buy?");
+                                if (quantity == null || quantity == "") {
+                                    text = "User cancelled the transaction.";
+                                } else {
+                                    text = "You have bought" + " " + quantity + " Tiramisu.";
+                                }
+                                document.getElementById("demo7").innerHTML = text;
+                            }
+                        </script>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Chilled, decadent, multilayered dessert with cocoa
+                                powder,
+                                ladyfingers, heavy cream, mascarpone cheese, espresso, coffee liqueur, and
+                                more.<br>
+                            </li>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{{url_for('static', filename='assets/img/strudel.png')}}" class="card-img-top">
+                    <div class="card-body">
+                        <div class="foodTitle">
+                            <h3 class="card-title">Apple Strudel</h3>
+                        </div>
+                        <p id="demo8"> </p>
+                        <button onclick="myFunction8()">Buy</button>
+                        <script>
+                            function myFunction8() {
+                                let text;
+                                let quantity = prompt("How much Apple Strudel do you want to buy?");
+                                if (quantity == null || quantity == "") {
+                                    text = "User cancelled the transaction.";
+                                } else {
+                                    text = "You have bought" + " " + quantity + " Apple Strudel.";
+                                }
+                                document.getElementById("demo8").innerHTML = text;
+                            }
+                        </script>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Warm, comforting, and wonderfully fragrant dessert that
+                                combines golden raisins, rum, apples, cinnamon, sugar, and other goodies.<br>
+                            </li>
+                    </div>
+                </div>
+            </div>
+
+            <p id="demo9"> </p>
+
+            <button id=buttonReposition class="buttonStyle" onclick="myFunction9()">Done</button>
+
+            <script>
+                function myFunction9() {
+                    var txt;
+                    if (confirm("Press OK if you have any leftovers!")) {
+                        txt = "Leftovers have been donated!!";
+                        setTimeout(location.reload.bind(location), 5000);
+                    }
+                    else {
+                        txt = "No leftovers remain. Thank you for using Save The Food!";
+                        setTimeout(location.reload.bind(location), 5000);
+                    }
+                    document.getElementById("demo9").innerHTML = txt;
+                }
+            </script>
+
+        </div>
+    </section>
+</body>
+
+</html>

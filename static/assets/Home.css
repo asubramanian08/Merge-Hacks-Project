@@ -1,0 +1,182 @@
+h1 {
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: 'Mukta', sans-serif;
+    font-size: 40px;
+}
+
+img {
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: coral;
+/*     padding-left: 40px;
+    padding-right: 40px; */
+  float: right;
+  margin: auto;
+
+}
+
+p {
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 105%;
+    left: 40%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: 'Mukta', sans-serif;
+    font-size: 15px;
+    word-wrap: break-word;
+    width: 400px;
+    height: 1000px;
+    font-size: 18px;
+    float: right;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    float: right;
+
+}
+
+/* NAV BAR */
+a {
+    color: white;
+}
+
+.topnav0 {
+    overflow: hidden;
+    background-color: coral;
+    width: 100%;
+    font-family: 'Mukta';
+}
+
+.topnav0 a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav0 a:hover {
+    background-color: #f96262;
+    color: #ffffff;
+}
+
+
+/* for NAV BAR */
+.topnav0 .icon {
+    display: none;
+}
+
+@media screen and (max-width: 0px) {
+    .topnav0 a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav0 a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 0px) {
+    .topnav0.responsive {
+        position: relative;
+    }
+
+    .topnav0.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav0.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .starving {
+        position: absolute;
+        float: right;
+    }
+}
+
+
+
+
+
+.typewriter h1 {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*   justify-content: center; */
+    /*   text-align: center;
+    justify-content: center; */
+    position: relative;
+    margin-top: 150px;
+    font-size: 65px;
+    width: 825px;
+    margin-bottom: 100px; 
+    /*   align-items: center;
+    justify-content: center; */
+    font-family: 'Mukta', sans-serif;
+
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 1.5 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .05em;
+    /* Adjust as needed */
+    animation:
+        typing 2s steps(20, end),
+        blink-caret 1s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 600
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="rwidth=device-width">
+    <title>Save the Food Project</title>
+    <link href="assets/Home.css" rel="stylesheet" type="text/css" />
+    <link href="{{url_for('static', filename='assets/styles.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='assets/Home.css')}}" rel="stylesheet">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+        {% if current_user.is_authenticated %}
+        <div class="topnav0" id="myTopnav0">
+            <div class="topnav0" id="myTopnav0">
+                <a href="/" class="active">Home</a>
+                <a href="/info">About Us</a>
+                <a href="/recipes">Recipes</a>
+                <a href="/login">Login</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i></a>
+                {% endif %}
+
+            </div>
+        </div>
+        <!--     {% if current_user.is_authenticated %}
+          <div class="topnav0" id="myTopnav0">
+<div class="topnav0" id="myTopnav0">
+  <a href="/" class="active">Home</a>
+  <a href="/login">Login</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i></a>
+    {% endif %}
+
+</div>
+          </div> -->
+
+    </header><!-- End Header -->
+    <!--   <header>
+      <nav>
+        <ul class="nav_links">
+          <li><a href = #home>Home</a></li>
+          <li><a href = #info>Info</a></li>
+          <li><a href = #recipes>Recipes</a></li>
+          <li><a href = #log-in>Login</a></li>
+         </ul>
+      </nav>
+    </header> -->
+<div class="typewriter">
+  <h1>Welcome to Save the Food</h1>
+</div>
+
+    <div class="middle">
+
+
+        <img id: "starving" src="static/assets/img/Savethefood.png" alt="Logo" height="1000" width="1000">
+    </div>
+    <p>Here at Save The Food, we strive to help our users... save the food! First-time users can sign up to create an
+        account for our website, and returning users will be able to log in. After signing up/logging in, there will be
+        a list of recipes available to buy and make, and selecting a recipe also allows the user to choose the quantity
+        of how many of each food to buy. Once they make their purchase, users see their "inventory" of foods. Users can
+        select the done button to complete their cooking, and a prompt asks them if they have any leftovers. Selecting
+        "OK" will donate all leftovers to homeless shelters.
+
+    </p>
+    </div>
+    <script src="script.js"></script>
+
+    <!--
+This script places a badge on your repl's full-browser view back to your repl's cover page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green, teal, blue, blurple, magenta, pink!
+-->
+    <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+    <script src="{{url_for('static',filename = 'assets/script.js')}}"></script>
+</body>
+
+</html>

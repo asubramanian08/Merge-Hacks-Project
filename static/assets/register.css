@@ -1,0 +1,219 @@
+section {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#loginStyle {
+    font-family: 'Mukta', sans-serif;
+    font-size: 35px;
+}
+
+.beegContainer {
+    border-radius: 20px;
+    border-style: solid;
+    border-size: 0px;
+    border-color: coral;
+    padding: 50px;
+}
+
+section {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#loginStyle {
+    font-family: 'Mukta', sans-serif;
+    font-size: 35px;
+}
+
+.beegContainer {
+    border-radius: 20px;
+    border-style: solid;
+    border-size: 0px;
+    border-color: coral;
+    padding: 50px;
+}
+
+button {
+    border-radius: 20px;
+    border-style: solid;
+    border-size: 0px;
+    background-color: #7752ff;
+    border-color: #7752ff;
+    padding: 10px;
+    margin-top: 20;
+    font-family: 'Mukta', sans-serif;
+    margin-bottom: 20px;
+    color: white;
+}
+
+input[type=email] {
+    padding: 10px;
+}
+
+input[type=password] {
+    padding: 10px;
+}
+
+
+.registerP {
+    color: coral;
+    margin-top: 200px;
+}
+
+/* for register */
+input[type=text] {
+    padding: 10px;
+}
+
+a {
+    color: white;
+    font-family: 'Mukta';
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: coral;
+    width: 100%;
+    font-family: 'Mukta';
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #f96262;
+    color: #ffffff;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 0px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 0px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/*  Typing Animation */
+.typewriter p {
+    margin-top: 30px;
+    font-family: 'Mukta', sans-serif;
+    font-size: 15px;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 3.5 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .05em;
+    /* Adjust as needed */
+    animation:
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange
+    }
+}
+
+/* button {
+    border-radius: 20px;
+    border-style: solid;
+    border-size: 0px;
+    background-color: coral;
+    border-color: coral;
+    padding: 10px;
+    margin-top: 20;
+    font-family: 'Mukta', sans-serif;
+    margin-bottom: 20px;
+}
+
+input[type=email] {
+    padding: 10px;
+}
+
+input[type=password] {
+    padding: 10px;
+}
+
+.registerP {
+    color: coral;
+    margin-top: 200px;
+}
+
+/ for register /
+input[type=text] {
+    padding: 10px;
+} */
